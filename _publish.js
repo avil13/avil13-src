@@ -1,7 +1,6 @@
 var ghpages = require('gh-pages');
-const origin = require('remote-origin-url');
 
-const repo = origin.sync();
+const repo = 'git@github.com:avil13/avil13.github.com.git';
 
 ghpages.publish('dist', {
     repo
