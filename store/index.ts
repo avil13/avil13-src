@@ -25,6 +25,20 @@ const store = {
         setItems(state: IIndexState, items = []) {
             state.items = items;
         }
+    },
+
+    getters: {
+        tags: state => {
+            const tagList: string[] = [];
+            state.items.forEach((v: IListItem) => {
+                v.tags.forEach(tag => {
+                    if (!tagList.includes(tag)) {
+                        tagList.push(tag);
+                    }
+                });
+            });
+            return tagList;
+        }
     }
 };
 

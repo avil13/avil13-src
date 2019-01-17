@@ -1,6 +1,6 @@
 <template>
-    <v-flex xs12 md4>
-        <v-card class="card-repo-wrapper">
+    <v-flex xs12 md3>
+        <v-card class="card-repo-wrapper pos-r">
             <v-img
                 contain
                 :src="(item.image || '/img/image/github.png')"
@@ -22,19 +22,22 @@
                     <v-card-text>{{ item.description }}</v-card-text>
                 </v-layout>
             </v-card-title>
-            <v-card-actions v-for="(url, i) in btnUrls" :key="url">
-                <a
-                    :href="url"
-                    outline
-                    block
-                    color="teal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="v-btn v-btn--block v-btn--outline v-btn--depressed v-btn--router theme--light teal--text"
-                >
-                    <div class="v-btn__content">{{ btnTexts[i] }}</div>
-                </a>
-            </v-card-actions>
+
+            <div class="bottom-block">
+                <v-card-actions v-for="(btn, i) in btnUrls" :key="btn.url + i">
+                    <a
+                        :href="btn.url"
+                        outline
+                        block
+                        color="teal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="v-btn v-btn--block v-btn--outline v-btn--depressed v-btn--router theme--light teal--text"
+                    >
+                        <div class="v-btn__content">{{ btn.name }}</div>
+                    </a>
+                </v-card-actions>
+            </div>
         </v-card>
     </v-flex>
 </template>
@@ -51,13 +54,18 @@ export default class CardRepoComponent extends Vue {
     })
     item: IListItem;
 
-    btnTexts = ['Repo', 'Demo'];
-
     get btnUrls() {
-        const res = [this.item.url];
+        const res: any[] = [];
         if (this.item.demoUrl) {
-            res.push(this.item.demoUrl);
+            res.push({
+                name: 'Demo',
+                url: this.item.demoUrl
+            });
         }
+        res.push({
+            name: 'Repo',
+            url: this.item.url
+        });
         return res;
     }
 }
@@ -75,5 +83,14 @@ export default class CardRepoComponent extends Vue {
 }
 .repo-title a:hover {
     text-decoration: underline;
+}
+.pos-r {
+    position: relative;
+}
+.bottom-block {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 </style>
