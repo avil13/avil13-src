@@ -3,17 +3,11 @@
         <v-flex xs12>
             <h1 class="headline text-xs-center">List of repositories by AVIL13</h1>
         </v-flex>
-        <v-flex xs12 md8 offset-md2>
-            <v-select
-                v-model="tagValue"
-                :items="tags"
-                attach
-                chips
-                label="Tags"
-                multiple
-                solo
-            ></v-select>
+        <!--  -->
+        <v-flex xs12>
+            <tag-select v-model="tagValue"/>
         </v-flex>
+        <!--  -->
         <card-repo
             :item="item"
             v-for="(item, i) in itemsList"
@@ -27,10 +21,12 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator';
 import { State, Getter } from 'vuex-class';
 import cardRepo from '~/components/card-repo/card-repo.vue';
 import { IListItem } from '~/store/index.ts';
+import tagSelect from '~/components/select/tag-select.vue';
 
 @Component({
     components: {
-        'card-repo': cardRepo
+        'card-repo': cardRepo,
+        'tag-select': tagSelect
     }
 })
 export default class IndexPage extends Vue {

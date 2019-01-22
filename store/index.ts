@@ -7,6 +7,7 @@ export interface IListItem {
     url: string;
     demoUrl?: string;
     image?: string;
+    icon?: string;
 }
 
 export interface IIndexState {

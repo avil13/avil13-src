@@ -1,10 +1,22 @@
 import { IListItem } from '~/store';
 
+export const icons: string[] = [
+    'bash',
+    'go',
+    'gulp',
+    'jquery',
+    'mysql',
+    'nodejs',
+    'php',
+    'vue',
+    'webpack'
+];
+
 const items: IListItem[] = [
     {
         name: 'vue-sweetalert2',
         description: 'A convenient VueJS wrapper for sweetalert2.',
-        tags: ['Vue', 'Sweatalert2', 'SSR'],
+        tags: ['vue', 'sweatalert2', 'ssr'],
         image:
             'https://raw.githubusercontent.com/avil13/vue-sweetalert2/master/assets/logo.png',
         url: 'https://github.com/avil13/vue-sweetalert2',
@@ -83,28 +95,28 @@ const items: IListItem[] = [
     {
         name: 'jQuery-anchorSpy',
         description: 'jQuery plugin to active menu item on scroll',
-        tags: ['jQuery', 'plugin', 'menu'],
+        tags: ['jquery', 'plugin', 'menu'],
         url: 'https://github.com/avil13/jQuery-anchorSpy',
         demoUrl: 'https://avil13.github.io/jQuery-anchorSpy/'
     },
     {
         name: 'jQuery-numeric_format',
         description: 'Simple formatting numbers in strings',
-        tags: ['jQuery', 'plugin', 'format'],
+        tags: ['jquery', 'plugin', 'format'],
         url: 'https://github.com/avil13/jQuery-numeric_format',
         demoUrl: 'https://avil13.github.io/jQuery-numeric_format/'
     },
     {
         name: 'jQuery-form_data',
         description: 'Getting form data to Object, with jQuery',
-        tags: ['jQuery', 'plugin', 'form'],
+        tags: ['jquery', 'plugin', 'form'],
         url: 'https://github.com/avil13/jQuery-form_data',
         demoUrl: 'https://avil13.github.io/jQuery-form_data/'
     },
     {
         name: 'jQuery - invertImgText',
         description: 'jQuery plugin - diff Text and Image color',
-        tags: ['jQuery', 'plugin', 'image', 'text'],
+        tags: ['jquery', 'plugin', 'image', 'text'],
         url: 'https://github.com/avil13/invertImgText',
         demoUrl: 'https://avil13.github.io/invertImgText/'
     },
