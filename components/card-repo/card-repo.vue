@@ -8,7 +8,7 @@
                 aspect-ratio="1.8"
             ></v-img>
 
-            <v-card-title primary-title>
+            <v-card-title primary-title class="text-block">
                 <v-layout column>
                     <v-card-text>
                         <h2 class="headline repo-title text-xs-center">
@@ -92,5 +92,10 @@ export default class CardRepoComponent extends Vue {
     right: 0;
     left: 0;
     bottom: 0;
+}
+@media screen and (max-width: 960px) {
+    .bottom-block {
+        position: relative;
+    }
 }
 </style>
