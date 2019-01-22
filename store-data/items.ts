@@ -2,6 +2,8 @@ import { IListItem } from '~/store';
 
 export const icons: string[] = [
     'bash',
+    'pwa',
+    'git',
     'go',
     'gulp',
     'jquery',
@@ -33,7 +35,8 @@ const items: IListItem[] = [
     },
     {
         name: 'material-ico-fallback-loader',
-        description: 'Replace Material icons version 1 key words to ligature',
+        description:
+            'Webpack loader for replace Material icons version 1 key words to ligature',
         tags: ['webpack', 'loader', 'nodejs'],
         url: 'https://github.com/avil13/material-ico-fallback-loader',
         demoUrl: 'https://avil13.github.io/material-ico-fallback-loader/'
