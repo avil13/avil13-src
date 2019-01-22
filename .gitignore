@@ -69,7 +69,7 @@ typings/
 .nuxt
 
 # Nuxt generate
-# dist
+# dist # Нужен потому что через него отправляются файлы на сайт
 
 # vuepress build output
 .vuepress/dist
