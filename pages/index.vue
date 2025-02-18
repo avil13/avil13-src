@@ -4,7 +4,7 @@
             <h1 class="headline text-xs-center">List of repositories by AVIL13</h1>
         </v-flex>
         <!--  -->
-        <v-flex xs12>
+        <v-flex xs12 offset-md2 md8>
             <tag-select v-model="tagValue"/>
         </v-flex>
         <!--  -->
